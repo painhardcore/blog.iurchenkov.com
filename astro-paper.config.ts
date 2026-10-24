@@ -20,6 +20,16 @@ export default defineAstroPaperConfig({
     editPost: { enabled: false },
     search: "pagefind",
   },
-  socials: [{ name: "github", url: "https://github.com/painhardcore" }],
+  socials: [
+    { name: "github", url: "https://github.com/painhardcore" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/iurchenkov" },
+    { name: "mail", url: "mailto:andrei@iurchenkov.com" },
+    {
+      name: "x",
+      url: "https://twitter.com/painhardcore",
+      linkTitle: "Andrei Iurchenkov on Twitter",
+    },
+    { name: "telegram", url: "https://t.me/painhardcore" },
+  ],
   shareLinks: [],
 });
