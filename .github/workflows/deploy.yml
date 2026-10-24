@@ -1,0 +1,56 @@
+name: Check and deploy blog
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      ASTRO_TELEMETRY_DISABLED: 1
+    steps:
+      - uses: actions/checkout@v7.0.1
+      # ci-standard: except make-entry — Bun scripts are the project's shared check/build entry points.
+      - name: Check, build, and upload static site
+        uses: withastro/action@v6.1.2
+        with:
+          package-manager: bun@1.4.0
+          out-dir: dist
+          build-cmd: |
+            git diff --exit-code -- bun.lock
+            bun install --frozen-lockfile
+            bun --bun playwright install --with-deps chromium
+            bun run check
+            bun test
+            bun run test:articles
+            bun run build
+            bun run verify
+
+  # ci-standard: except no-prod-deploy — GitHub Pages deployment is explicitly requested for master.
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1
