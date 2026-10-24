@@ -2,7 +2,7 @@
 
 Andrei Iurchenkov's engineering blog at <https://blog.iurchenkov.com>.
 Built from [AstroPaper 6.1.0](https://github.com/satnaing/astro-paper/tree/v6.1.0),
-using Astro 6, TypeScript, and Bun. Output is entirely static.
+using Astro 7, TypeScript, and Bun. Output is entirely static.
 
 ## Local development
 
@@ -10,6 +10,7 @@ Use Bun **1.4.0**, matching `packageManager` and CI. No other package manager is
 
 ```sh
 bun install --frozen-lockfile
+bun audit
 bun --bun playwright install chromium
 bun run dev
 ```
@@ -129,3 +130,9 @@ forward visitors to the new domain. GitHub Pages cannot redirect another host.
 
 The theme's MIT license is preserved in `LICENSE`. No analytics or tracking
 scripts are included.
+
+KaTeX and `postcss-selector-parser` have security overrides because the current
+`rehype-katex` and Tailwind Typography releases require vulnerable older versions.
+The article feature build verifies math rendering and the typography pipeline
+against the patched versions. Revisit these overrides when the parent packages
+adopt patched releases. CI runs `bun audit` before building or deploying.
