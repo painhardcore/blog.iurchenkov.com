@@ -3,7 +3,7 @@ import { cp, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 
-// Build fixtures in an isolated copy so demonstration content can never enter dist.
+// Build test fixtures in an isolated copy so they never enter dist.
 const work = await mkdtemp(join(tmpdir(), "blog-articles-"));
 try {
   for (const path of [
@@ -17,22 +17,15 @@ try {
     await cp(path, join(work, path), { recursive: true });
   }
   await cp("node_modules", join(work, "node_modules"), { recursive: true });
-  const demo = await readFile(
-    "src/content/posts/technical-writing-demo.mdx",
-    "utf8"
-  );
+  const fixture = await readFile("tests/fixtures/rendering.mdx", "utf8");
   await writeFile(
     join(work, "src/content/posts/verification-mdx.mdx"),
-    demo.replace("draft: true", "draft: false")
+    fixture
   );
-  const markdown = demo
-    .replace("draft: true", "draft: false")
+  const markdown = fixture
     .replace(/^import .+;\n/gm, "")
     .replace(/<\/?ResponsiveTable[^>]*>/g, "")
-    .replace(
-      /<figure>[\s\S]*?<\/figure>/,
-      "![Illustrative storage path](./_assets/storage-path.svg)"
-    );
+    .replace(/<figure>[\s\S]*?<\/figure>/, "![Fixture image](/favicon.svg)");
   await writeFile(
     join(work, "src/content/posts/verification-markdown.md"),
     markdown +
@@ -52,9 +45,14 @@ ${Object.entries({
   .map(([lang, code]) => "\n```" + lang + "\n" + code + "\n```\n")
   .join("")}`
   );
-  const future = demo
-    .replace("draft: true", "draft: false")
-    .replace("2026-10-24T00:00:00Z", "2099-01-01T00:00:00Z");
+  await writeFile(
+    join(work, "src/content/posts/verification-draft.mdx"),
+    fixture.replace("draft: false", "draft: true")
+  );
+  const future = fixture.replace(
+    "2020-01-01T00:00:00Z",
+    "2099-01-01T00:00:00Z"
+  );
   await writeFile(
     join(work, "src/content/posts/verification-future.mdx"),
     future
@@ -93,17 +91,19 @@ ${Object.entries({
       5,
       `${slug}: diagram types`
     );
-    assert.match(html, /alt="An application sends a request/);
+    assert.match(html, /alt="A request passes from client to server/);
     assert.match(html, /data:image\/svg\+xml/);
     await readFile(join(work, "dist/posts", slug, "index.png"));
   }
   await readFile(join(work, "dist/posts/2/index.html"));
   const sitemap = await readFile(join(work, "dist/sitemap-0.xml"), "utf8");
   const rss = await readFile(join(work, "dist/rss.xml"), "utf8");
-  assert.doesNotMatch(
-    sitemap + rss,
-    /technical-writing-demo|interview-tips|verification-future/
-  );
+  assert.doesNotMatch(sitemap + rss, /verification-draft|verification-future/);
+  for (const slug of ["verification-draft", "verification-future"]) {
+    await assert.rejects(
+      readFile(join(work, "dist/posts", slug, "index.html"))
+    );
+  }
   console.info(
     "Verified Markdown and MDX: 11 code languages, highlighting, 5 Mermaid types, math, tables, callouts, footnotes, TOC, social images, pagination, and draft/scheduled exclusion"
   );

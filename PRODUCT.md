@@ -21,9 +21,9 @@ hosted on GitHub Pages at https://blog.iurchenkov.com.
 
 Preserve AstroPaper's architecture and minimal design. Accessible, responsive,
 keyboard-friendly, light and dark modes. No tracking, backend, CMS, fabricated
-research, or invented personal details. The demonstration article stays a draft.
+research, or invented personal details.
 
 ## Evidence
 
 The owner's brief supplies identity, topics, GitHub profile, and implementation
-requirements. The previous blog at `painhardcore/yur-blog` supplies six published articles, one draft, and their images. No new benchmark measurements were supplied.
+requirements. The previous blog at `painhardcore/yur-blog` supplies six published articles and their images. No new benchmark measurements were supplied.

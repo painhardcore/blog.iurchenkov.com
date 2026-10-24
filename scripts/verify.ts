@@ -17,17 +17,13 @@ for (const path of [
     /rel="canonical" href="https:\/\/blog\.iurchenkov\.com\//,
     path
   );
-  assert.doesNotMatch(
-    html,
-    /astro-paper\.pages\.dev|satna\.ing|Technical writing demonstration|technical-writing-demo/
-  );
+  assert.doesNotMatch(html, /astro-paper\.pages\.dev|satna\.ing/);
 }
 const feed = await readFile("dist/rss.xml", "utf8");
 assert.match(feed, /https:\/\/blog\.iurchenkov\.com/);
-assert.doesNotMatch(feed, /technical-writing-demo/);
 const sitemap = await readFile("dist/sitemap-0.xml", "utf8");
 assert.match(sitemap, /https:\/\/blog\.iurchenkov\.com\/posts\//);
-assert.doesNotMatch(sitemap, /technical-writing-demo|\/archives\/|\/404/);
+assert.doesNotMatch(sitemap, /\/archives\/|\/404/);
 assert.equal(
   (await readFile("dist/CNAME", "utf8")).trim(),
   "blog.iurchenkov.com"

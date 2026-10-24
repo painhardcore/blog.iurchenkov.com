@@ -1,0 +1,87 @@
+---
+title: Rendering test fixture
+description: Isolated content pipeline verification.
+pubDatetime: 2020-01-01T00:00:00Z
+tags: [verification]
+draft: false
+---
+
+import ResponsiveTable from "@/components/ResponsiveTable.astro";
+
+## Table of contents
+
+## Source code
+
+```rust {2} /capacity/
+fn main() {
+    let capacity = 4096;
+}
+```
+
+```go
+size := 4096 // [!code --]
+size := 8192 // [!code ++]
+```
+
+## Diagrams
+
+```mermaid
+flowchart TD
+    accTitle: Request path
+    accDescr: A request passes from client to server.
+    Client --> Server
+```
+
+```mermaid
+sequenceDiagram
+    accTitle: Request sequence
+    accDescr: Client requests data from server.
+    Client->>Server: read
+```
+
+```mermaid
+stateDiagram-v2
+    accTitle: State transition
+    accDescr: A write changes a clean entry to dirty.
+    Clean --> Dirty: write
+```
+
+```mermaid
+classDiagram
+    accTitle: Reader implementation
+    accDescr: CachedReader implements Reader.
+    Reader <|.. CachedReader
+```
+
+```mermaid
+erDiagram
+    accTitle: Inode extents
+    accDescr: An inode references extents.
+    INODE ||--o{ EXTENT : references
+```
+
+## Math and tables
+
+Inline $x^2$ and a block equation:
+
+$$
+\frac{a}{b}
+$$
+
+<ResponsiveTable>
+
+| Input | Output |
+| ----- | ------ |
+| a     | b      |
+
+</ResponsiveTable>
+
+> [!NOTE]
+> Fixture callout.[^fixture]
+
+<figure>
+  <img src="/favicon.svg" alt="Fixture image" />
+  <figcaption>Fixture caption</figcaption>
+</figure>
+
+[^fixture]: Fixture footnote.

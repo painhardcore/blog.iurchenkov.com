@@ -69,8 +69,8 @@ paginated, with previous/next navigation inside each article.
 
 ### Technical content
 
-The unpublished [`technical-writing-demo.mdx`](src/content/posts/technical-writing-demo.mdx)
-is a working reference. Preview it at `/posts/technical-writing-demo/` with `bun run dev`.
+Authoring syntax is covered by [the rendering fixture](tests/fixtures/rendering.mdx),
+which is built only in isolated tests.
 
 - Code fences accept Go, Rust, C, C++, Bash, Python, TypeScript, SQL, YAML, JSON,
   TOML, and other bundled Shiki languages. Line numbers are visual and do not
@@ -111,7 +111,7 @@ in every deployment. No repository base path is needed with this custom domain.
 
 ## Migrated content
 
-Six published articles and one unpublished interview draft were transferred
+Six published articles were transferred
 from [`painhardcore/yur-blog`](https://github.com/painhardcore/yur-blog/tree/master/src/content/blog).
 Their `/posts/<slug>/` paths, publication dates, tags, and featured status are
 preserved. Eleven referenced images are under `src/content/posts/_assets/imported/`.
