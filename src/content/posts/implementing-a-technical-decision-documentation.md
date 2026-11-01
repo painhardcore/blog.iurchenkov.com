@@ -1,7 +1,7 @@
 ---
 title: Implementing a Technical Decision Documentation
 pubDatetime: 2023-10-23T00:17:19Z
-featured: true
+featured: false
 draft: false
 tags:
   - team

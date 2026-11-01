@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" class="pf-miss" style="display:block;width:100%;min-width:34rem;height:auto">
+  <defs>
+    <pattern id="pf-miss-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#e5484d" fill-opacity="0.18"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#e5484d" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <style>
+    .pf-miss text { font-size: 14px; fill: var(--foreground); }
+    .pf-miss .dim { fill: var(--muted-foreground); }
+    .pf-miss .acc { fill: var(--accent); font-weight: 700; }
+    .pf-miss .no { fill: #e5484d; font-weight: 700; }
+    .pf-miss .part { fill: var(--muted); }
+    .pf-miss .gap { fill: none; stroke: var(--muted-foreground); stroke-dasharray: 4 4; }
+    .pf-miss .zone { fill: url(#pf-miss-hatch); }
+    .pf-miss .root { fill: var(--accent); }
+    .pf-miss .bank { fill: var(--accent); opacity: 0.45; }
+    .pf-miss .lead { stroke: var(--muted-foreground); stroke-width: 1; fill: none; }
+  </style>
+  <text x="383" y="24" text-anchor="middle" class="no">whole-disk wipe, the disk's last 2 MiB</text>
+  <path d="M76 40v-6h614v6" class="lead"/>
+
+  <text x="383" y="62" text-anchor="middle" class="dim">partition end</text>
+  <text x="700" y="62" text-anchor="end" class="dim">disk end</text>
+
+  <rect x="20" y="70" width="363" height="60" class="part"/>
+  <rect x="384" y="71" width="305" height="58" class="gap"/>
+  <rect x="76" y="70" width="614" height="60" class="zone"/>
+  <text x="536" y="105" text-anchor="middle">1 MiB, no partition</text>
+
+  <rect x="60" y="74" width="14" height="52" rx="2" class="root"/>
+  <rect x="268" y="74" width="77" height="52" rx="2" class="bank"/>
+
+  <path d="M67 130v18M306 130v18" class="lead"/>
+  <text x="20" y="168" class="acc">root B survives</text>
+  <text x="20" y="188" class="dim">missed by one 4 KiB block</text>
+  <text x="306" y="168" text-anchor="middle" class="no">bank B zeroed</text>
+  <text x="306" y="188" text-anchor="middle" class="dim">all 256 KiB</text>
+
+  <text x="20" y="230" class="dim">Root B is one 4 KiB block, drawn wider so you can see it.</text>
+</svg>

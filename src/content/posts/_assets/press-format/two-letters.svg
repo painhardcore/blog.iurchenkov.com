@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 250" class="pf-two" style="display:block;width:100%;min-width:34rem;height:auto">
+  <style>
+    .pf-two text { font-size: 14px; fill: var(--foreground); }
+    .pf-two .dim { fill: var(--muted-foreground); }
+    .pf-two .big { font-size: 28px; font-weight: 700; }
+    .pf-two .acc { fill: var(--accent); font-weight: 700; }
+    .pf-two .bad { fill: #e5484d; font-weight: 700; }
+    .pf-two .drive { fill: var(--muted); stroke: var(--foreground); stroke-width: 1.5; }
+    .pf-two .band { fill: var(--muted); }
+    .pf-two .files { fill: none; stroke: var(--muted-foreground); stroke-dasharray: 4 4; }
+    .pf-two .clash { fill: #e5484d; }
+    .pf-two .arrow { stroke: var(--muted-foreground); stroke-width: 1.5; fill: none; }
+    .pf-two .tip { fill: var(--muted-foreground); }
+  </style>
+  <defs>
+    <marker id="pf-two-tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" class="tip"/>
+    </marker>
+  </defs>
+
+  <rect x="110" y="24" width="150" height="76" rx="8" class="drive"/>
+  <text x="185" y="62" text-anchor="middle" class="big">D:</text>
+  <text x="185" y="88" text-anchor="middle" class="dim">exFAT</text>
+  <rect x="460" y="24" width="150" height="76" rx="8" class="drive"/>
+  <text x="535" y="62" text-anchor="middle" class="big">F:</text>
+  <text x="535" y="88" text-anchor="middle" class="acc">old CarryFS</text>
+  <text x="360" y="66" text-anchor="middle" class="dim">one stick, two letters</text>
+
+  <path d="M185 100 L172 164" class="arrow" marker-end="url(#pf-two-tip)"/>
+  <path d="M535 100 L178 164" class="arrow" marker-end="url(#pf-two-tip)"/>
+  <text x="196" y="134" class="dim">exFAT's FAT</text>
+  <text x="540" y="124" class="acc">writes root A</text>
+
+  <rect x="110" y="170" width="500" height="40" rx="4" class="files"/>
+  <rect x="110" y="170" width="100" height="40" rx="4" class="band"/>
+  <rect x="510" y="170" width="100" height="40" rx="4" class="band"/>
+  <rect x="168" y="170" width="12" height="40" rx="2" class="clash"/>
+  <text x="360" y="195" text-anchor="middle" class="dim">one partition</text>
+  <text x="174" y="234" text-anchor="middle" class="bad">1 MiB in: whose block?</text>
+</svg>

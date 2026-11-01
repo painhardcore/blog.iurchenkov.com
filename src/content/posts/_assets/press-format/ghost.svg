@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" class="pf-ghost" style="display:block;width:100%;min-width:34rem;height:auto">
+  <style>
+    .pf-ghost text { font-size: 14px; fill: var(--foreground); }
+    .pf-ghost .dim { fill: var(--muted-foreground); }
+    .pf-ghost .head { font-size: 15px; font-weight: 700; }
+    .pf-ghost .card { fill: var(--muted); }
+    .pf-ghost .ok { fill: var(--accent); font-weight: 700; }
+    .pf-ghost .rule { stroke: var(--muted-foreground); stroke-width: 1; opacity: 0.4; }
+    .pf-ghost .body { fill: var(--muted); stroke: var(--foreground); stroke-width: 1.5; }
+    .pf-ghost .eye { fill: var(--foreground); }
+    .pf-ghost .root { fill: var(--accent); }
+    .pf-ghost .lead { stroke: var(--muted-foreground); stroke-width: 1; }
+  </style>
+  <rect x="20" y="16" width="420" height="228" rx="8" class="card"/>
+  <text x="40" y="46" class="head">what the stick went through</text>
+  <text x="420" y="46" text-anchor="end" class="dim">root B</text>
+  <line x1="40" y1="58" x2="420" y2="58" class="rule"/>
+  <text x="40" y="84">1. diskpart clean</text><text x="420" y="84" text-anchor="end" class="ok">survived</text>
+  <text x="40" y="112">2. exFAT across the disk</text><text x="420" y="112" text-anchor="end" class="ok">survived</text>
+  <text x="40" y="140">3. whole-disk CarryFS format</text><text x="420" y="140" text-anchor="end" class="ok">survived</text>
+  <text x="40" y="168">4. diskpart clean, again</text><text x="420" y="168" text-anchor="end" class="ok">survived</text>
+  <text x="40" y="196">5. EFI + exFAT from 201 MiB</text><text x="420" y="196" text-anchor="end" class="ok">survived</text>
+  <line x1="40" y1="210" x2="420" y2="210" class="rule"/>
+  <text x="40" y="232" class="dim">2052 KiB from the end, 4 KiB past the wipe</text>
+
+  <path d="M530 200 V112 A50 50 0 0 1 630 112 V200 L613 186 L597 200 L580 186 L563 200 L547 186 Z" class="body"/>
+  <circle cx="562" cy="118" r="6" class="eye"/>
+  <rect x="591" y="110" width="14" height="16" rx="3" class="root"/>
+  <ellipse cx="580" cy="152" rx="6" ry="9" class="eye"/>
+  <line x1="607" y1="116" x2="646" y2="101" class="lead"/>
+  <text x="650" y="104" class="dim">root B</text>
+  <text x="580" y="232" text-anchor="middle" class="ok">still here</text>
+</svg>

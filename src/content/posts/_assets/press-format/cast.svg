@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 124 720 254" class="pf-cast" style="display:block;width:100%;min-width:34rem;height:auto">
+  <style>
+    .pf-cast text { font-size: 14px; fill: var(--foreground); }
+    .pf-cast .dim { fill: var(--muted-foreground); font-size: 13px; }
+    .pf-cast .head { font-weight: 700; }
+    .pf-cast .say { font-size: 13px; }
+    .pf-cast .inv { fill: var(--background); font-size: 12px; font-weight: 700; }
+    .pf-cast .fig { fill: none; stroke: var(--foreground); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .pf-cast .wall { fill: var(--muted); stroke: var(--foreground); stroke-width: 1.5; }
+    .pf-cast .line { fill: none; stroke: var(--foreground); stroke-width: 1.5; }
+    .pf-cast .solid { fill: var(--foreground); }
+    .pf-cast .bubble { fill: var(--background); stroke: var(--muted-foreground); stroke-width: 1.5; }
+    .pf-cast .root { fill: var(--accent); }
+    .pf-cast .paint { fill: var(--foreground); opacity: 0.18; }
+    .pf-cast .painted { fill: var(--foreground); opacity: 0.45; }
+    .pf-cast .metal { fill: var(--muted-foreground); }
+    .pf-cast .track { fill: var(--foreground); opacity: 0.75; }
+    .pf-cast .hub { fill: var(--background); }
+    .pf-cast .ground { stroke: var(--muted-foreground); stroke-width: 1.5; }
+  </style>
+
+  <!-- Linux: the doorman -->
+  <path d="M38 168 H142 Q150 168 150 176 V192 Q150 200 142 200 H92 L85 214 L78 200 H38 Q30 200 30 192 V176 Q30 168 38 168 Z" class="bubble"/>
+  <text x="90" y="189" text-anchor="middle" class="say">not on my list</text>
+  <rect x="74" y="221" width="22" height="7" rx="2" class="solid"/>
+  <path d="M70 228 H100" class="fig"/>
+  <circle cx="85" cy="238" r="12" class="fig"/>
+  <path d="M85 250 V290 M85 290 L74 320 M85 290 L96 320 M85 262 L70 284 M85 262 L104 268" class="fig"/>
+  <rect x="102" y="252" width="24" height="32" rx="2" class="wall"/>
+  <path d="M107 262 H121 M107 270 H121 M107 278 H117" class="line"/>
+
+  <!-- Windows: the painter -->
+  <polygon points="195,228 205,213 215,228" class="wall"/>
+  <circle cx="205" cy="238" r="12" class="fig"/>
+  <path d="M205 250 V290 M205 290 L194 320 M205 290 L216 320 M205 262 L190 282 M205 262 L232 254 L245 239" class="fig"/>
+  <rect x="241" y="222" width="8" height="34" rx="3" class="metal"/>
+  <rect x="166" y="302" width="18" height="18" rx="2" class="wall"/>
+
+  <!-- the house: CarryFS, root A at the front, root B at the back -->
+  <polygon points="240,200 320,140 400,200" class="wall"/>
+  <rect x="250" y="200" width="140" height="120" class="wall"/>
+  <text x="320" y="188" text-anchor="middle" class="head">CarryFS</text>
+  <rect x="251" y="201" width="49" height="118" class="paint"/>
+  <rect x="264" y="218" width="24" height="24" rx="2" class="painted"/>
+  <text x="276" y="235" text-anchor="middle" class="inv">A</text>
+  <rect x="352" y="218" width="24" height="24" rx="2" class="root"/>
+  <text x="364" y="235" text-anchor="middle" class="inv">B</text>
+  <text x="276" y="260" text-anchor="middle" class="dim">root A</text>
+  <text x="364" y="260" text-anchor="middle" class="dim">root B</text>
+  <rect x="305" y="268" width="30" height="52" class="line"/>
+  <circle cx="329" cy="296" r="2" class="solid"/>
+
+  <!-- macOS: the bulldozer that rings the doorbell first -->
+  <path d="M528 168 H632 Q640 168 640 176 V192 Q640 200 632 200 H592 L585 214 L578 200 H528 Q520 200 520 192 V176 Q520 168 528 168 Z" class="bubble"/>
+  <text x="580" y="189" text-anchor="middle" class="say">anyone home?</text>
+  <path d="M458 252 H446 Q438 286 446 320 H458 Z" class="metal"/>
+  <path d="M458 284 L500 280 M524 262 V244" class="fig"/>
+  <rect x="560" y="222" width="52" height="40" rx="3" class="wall"/>
+  <rect x="568" y="230" width="36" height="24" rx="2" class="paint"/>
+  <rect x="500" y="262" width="124" height="38" rx="4" class="wall"/>
+  <rect x="496" y="300" width="132" height="20" rx="10" class="track"/>
+  <circle cx="510" cy="310" r="6" class="hub"/>
+  <circle cx="537" cy="310" r="6" class="hub"/>
+  <circle cx="564" cy="310" r="6" class="hub"/>
+  <circle cx="591" cy="310" r="6" class="hub"/>
+  <circle cx="618" cy="310" r="6" class="hub"/>
+
+  <line x1="20" y1="320" x2="700" y2="320" class="ground"/>
+
+  <text x="85" y="346" text-anchor="middle" class="head">Linux</text>
+  <text x="85" y="366" text-anchor="middle" class="dim">checks a list</text>
+  <text x="210" y="346" text-anchor="middle" class="head">Windows</text>
+  <text x="210" y="366" text-anchor="middle" class="dim">paints the front</text>
+  <text x="560" y="346" text-anchor="middle" class="head">macOS</text>
+  <text x="560" y="366" text-anchor="middle" class="dim">rings, then flattens</text>
+</svg>

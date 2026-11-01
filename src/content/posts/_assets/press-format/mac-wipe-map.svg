@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" class="pf-wipemap" style="display:block;width:100%;min-width:34rem;height:auto">
+  <defs>
+    <pattern id="pf-wipemap-hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#e5484d" fill-opacity="0.18"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#e5484d" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <style>
+    .pf-wipemap text { font-size: 14px; fill: var(--foreground); }
+    .pf-wipemap .dim { fill: var(--muted-foreground); }
+    .pf-wipemap .disk { fill: var(--muted); }
+    .pf-wipemap .zone { fill: url(#pf-wipemap-hatch); }
+    .pf-wipemap .band { fill: var(--accent); }
+    .pf-wipemap .files { fill: none; stroke: var(--muted-foreground); stroke-dasharray: 4 4; }
+  </style>
+  <text x="20" y="26">Apple's wipefs zeroes these on every device</text>
+  <rect x="20" y="40" width="680" height="48" rx="4" class="disk"/>
+  <rect x="20" y="40" width="60" height="48" class="zone"/>
+  <rect x="352" y="40" width="16" height="48" class="zone"/>
+  <rect x="640" y="40" width="60" height="48" class="zone"/>
+  <text x="20" y="108" class="dim">first 2 MiB</text>
+  <text x="360" y="108" text-anchor="middle" class="dim">64 KiB, NTFS</text>
+  <text x="700" y="108" text-anchor="end" class="dim">last 2 MiB</text>
+
+  <text x="20" y="150">CarryFS keeps its roots and banks here</text>
+  <rect x="20" y="164" width="60" height="40" rx="4" class="band"/>
+  <rect x="86" y="168" width="548" height="32" rx="4" class="files"/>
+  <text x="360" y="189" text-anchor="middle" class="dim">your files</text>
+  <rect x="640" y="164" width="60" height="40" rx="4" class="band"/>
+</svg>

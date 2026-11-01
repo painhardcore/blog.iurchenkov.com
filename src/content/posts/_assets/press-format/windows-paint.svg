@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 270" class="pf-paint" style="display:block;width:100%;min-width:34rem;height:auto">
+  <style>
+    .pf-paint text { font-size: 14px; fill: var(--foreground); }
+    .pf-paint .dim { fill: var(--muted-foreground); }
+    .pf-paint .acc { fill: var(--accent); font-weight: 700; }
+    .pf-paint .head { font-weight: 700; }
+    .pf-paint .band { fill: var(--muted); }
+    .pf-paint .files { fill: none; stroke: var(--muted-foreground); stroke-dasharray: 4 4; }
+    .pf-paint .root { fill: var(--accent); }
+    .pf-paint .bank { fill: var(--accent); opacity: 0.45; }
+    .pf-paint .exfat { fill: var(--foreground); opacity: 0.22; }
+    .pf-paint .fat { fill: var(--foreground); opacity: 0.55; }
+    .pf-paint .lead { stroke: var(--muted-foreground); stroke-width: 1; }
+  </style>
+  <text x="20" y="26" class="head">before</text>
+  <rect x="20" y="40" width="140" height="48" rx="4" class="band"/>
+  <rect x="166" y="44" width="388" height="40" rx="4" class="files"/>
+  <rect x="560" y="40" width="140" height="48" rx="4" class="band"/>
+  <rect x="29" y="44" width="18" height="40" rx="2" class="bank"/>
+  <rect x="98" y="44" width="8" height="40" rx="2" class="root"/>
+  <rect x="626" y="44" width="8" height="40" rx="2" class="root"/>
+  <rect x="674" y="44" width="18" height="40" rx="2" class="bank"/>
+  <text x="360" y="69" text-anchor="middle" class="dim">old CarryFS volume</text>
+
+  <text x="20" y="130" class="head">after a quick format to exFAT</text>
+  <rect x="20" y="144" width="140" height="48" rx="4" class="band"/>
+  <rect x="166" y="148" width="388" height="40" rx="4" class="files"/>
+  <rect x="560" y="144" width="140" height="48" rx="4" class="band"/>
+  <rect x="20" y="144" width="140" height="48" rx="4" class="exfat"/>
+  <rect x="98" y="148" width="8" height="40" rx="2" class="fat"/>
+  <rect x="626" y="148" width="8" height="40" rx="2" class="root"/>
+  <rect x="674" y="148" width="18" height="40" rx="2" class="bank"/>
+  <text x="360" y="173" text-anchor="middle" class="dim">exFAT's empty data area</text>
+
+  <line x1="102" y1="192" x2="102" y2="210" class="lead"/>
+  <line x1="630" y1="192" x2="630" y2="210" class="lead"/>
+  <text x="20" y="228">root A is now exFAT's FAT</text>
+  <text x="20" y="248" class="dim">f8 ff ff ff where CFSXROOT was</text>
+  <text x="700" y="228" text-anchor="end" class="acc">root B untouched</text>
+  <text x="700" y="248" text-anchor="end" class="dim">still CFSXROOT</text>
+</svg>

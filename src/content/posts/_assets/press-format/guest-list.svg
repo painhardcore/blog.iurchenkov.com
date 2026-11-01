@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" class="pf-guests" style="display:block;width:100%;min-width:34rem;height:auto">
+  <style>
+    .pf-guests text { font-size: 14px; fill: var(--foreground); }
+    .pf-guests .dim { fill: var(--muted-foreground); }
+    .pf-guests .head { font-size: 15px; font-weight: 700; }
+    .pf-guests .card { fill: var(--muted); }
+    .pf-guests .ok { fill: var(--accent); font-weight: 700; }
+    .pf-guests .no { fill: #e5484d; font-weight: 700; }
+    .pf-guests .rule { stroke: var(--muted-foreground); stroke-width: 1; opacity: 0.4; }
+    .pf-guests .disk { fill: none; stroke: var(--foreground); stroke-width: 1.5; }
+    .pf-guests .root { fill: var(--accent); }
+    .pf-guests .arrow { stroke: var(--muted-foreground); stroke-width: 1.5; fill: none; }
+    .pf-guests .tip { fill: var(--muted-foreground); }
+  </style>
+  <rect x="30" y="16" width="290" height="268" rx="8" class="card"/>
+  <text x="50" y="46" class="head">libblkid's guest list</text>
+  <line x1="50" y1="58" x2="300" y2="58" class="rule"/>
+  <text x="50" y="84">ext4</text><text x="296" y="84" text-anchor="end" class="ok">yes</text>
+  <text x="50" y="108">Btrfs</text><text x="296" y="108" text-anchor="end" class="ok">yes</text>
+  <text x="50" y="132">ZFS</text><text x="296" y="132" text-anchor="end" class="ok">yes</text>
+  <text x="50" y="156">APFS</text><text x="296" y="156" text-anchor="end" class="ok">yes</text>
+  <text x="50" y="180">Xenix</text><text x="296" y="180" text-anchor="end" class="ok">yes</text>
+  <text x="50" y="204">NetWare</text><text x="296" y="204" text-anchor="end" class="ok">yes</text>
+  <text x="50" y="228">BeFS, from BeOS</text><text x="296" y="228" text-anchor="end" class="ok">yes</text>
+  <text x="50" y="252" class="dim">75 more, 82 in total</text>
+  <text x="50" y="274" class="dim">CarryFS</text><text x="296" y="274" text-anchor="end" class="no">no</text>
+
+  <path d="M330 150h84" class="arrow"/>
+  <path d="M424 150l-11-6v12z" class="tip"/>
+  <text x="374" y="138" text-anchor="middle" class="dim">probe</text>
+
+  <rect x="436" y="96" width="250" height="108" rx="8" class="disk"/>
+  <rect x="456" y="120" width="22" height="60" rx="2" class="root"/>
+  <rect x="644" y="120" width="22" height="60" rx="2" class="root"/>
+  <text x="561" y="146" text-anchor="middle">CFSXROOT</text>
+  <text x="561" y="166" text-anchor="middle" class="dim">at both ends</text>
+  <text x="561" y="82" text-anchor="middle" class="dim">the device</text>
+
+  <text x="561" y="236" text-anchor="middle" class="no">nothing recognised</text>
+  <text x="561" y="258" text-anchor="middle" class="dim">nothing wiped</text>
+</svg>

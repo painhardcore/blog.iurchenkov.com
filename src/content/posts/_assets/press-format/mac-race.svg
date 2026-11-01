@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" class="pf-race" style="display:block;width:100%;min-width:34rem;height:auto">
+  <defs>
+    <linearGradient id="pf-race-fade">
+      <stop offset="0" stop-color="var(--accent)" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .pf-race text { font-size: 14px; fill: var(--foreground); }
+    .pf-race .dim { fill: var(--muted-foreground); }
+    .pf-race .acc { fill: var(--accent); font-weight: 700; }
+    .pf-race .no { fill: #e5484d; font-weight: 700; }
+    .pf-race .live { fill: var(--accent); opacity: 0.4; }
+    .pf-race .fade { fill: url(#pf-race-fade); }
+    .pf-race .axis { stroke: var(--muted-foreground); stroke-width: 1; }
+    .pf-race .mark { stroke: var(--foreground); stroke-width: 1.5; }
+    .pf-race .late { stroke: #e5484d; stroke-width: 1.5; stroke-dasharray: 4 3; }
+  </style>
+  <text x="60" y="48">disk4s2 appears</text>
+  <line x1="60" y1="56" x2="60" y2="180" class="mark"/>
+
+  <text x="560" y="72" text-anchor="middle">storagekitd wipes, runs newfs</text>
+  <text x="560" y="92" text-anchor="middle" class="no">too late, it's mounted: -69830</text>
+  <line x1="485" y1="100" x2="485" y2="180" class="late"/>
+  <line x1="636" y1="100" x2="636" y2="180" class="late"/>
+
+  <rect x="60" y="130" width="425" height="34" class="live"/>
+  <rect x="485" y="130" width="151" height="34" class="fade"/>
+  <text x="72" y="152">old CarryFS still readable</text>
+  <text x="72" y="124" class="acc">DiskArbitration probes and mounts it in here</text>
+
+  <line x1="60" y1="190" x2="680" y2="190" class="axis"/>
+  <g class="axis">
+    <line x1="60" y1="190" x2="60" y2="196"/>
+    <line x1="149" y1="190" x2="149" y2="196"/>
+    <line x1="237" y1="190" x2="237" y2="196"/>
+    <line x1="326" y1="190" x2="326" y2="196"/>
+    <line x1="414" y1="190" x2="414" y2="196"/>
+    <line x1="503" y1="190" x2="503" y2="196"/>
+    <line x1="591" y1="190" x2="591" y2="196"/>
+    <line x1="680" y1="190" x2="680" y2="196"/>
+  </g>
+  <text x="60" y="214" text-anchor="middle" class="dim">0</text>
+  <text x="149" y="214" text-anchor="middle" class="dim">100</text>
+  <text x="237" y="214" text-anchor="middle" class="dim">200</text>
+  <text x="326" y="214" text-anchor="middle" class="dim">300</text>
+  <text x="414" y="214" text-anchor="middle" class="dim">400</text>
+  <text x="503" y="214" text-anchor="middle" class="dim">500</text>
+  <text x="591" y="214" text-anchor="middle" class="dim">600</text>
+  <text x="680" y="214" text-anchor="middle" class="dim">700 ms</text>
+  <text x="560" y="236" text-anchor="middle" class="dim">wipe arrived after 480 to 650 ms</text>
+</svg>
