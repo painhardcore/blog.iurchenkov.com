@@ -67,10 +67,10 @@
 
   <line x1="20" y1="320" x2="700" y2="320" class="ground"/>
 
-  <text x="85" y="346" text-anchor="middle" class="head">Linux</text>
-  <text x="85" y="366" text-anchor="middle" class="dim">checks a list</text>
-  <text x="210" y="346" text-anchor="middle" class="head">Windows</text>
-  <text x="210" y="366" text-anchor="middle" class="dim">paints the front</text>
+  <text x="78" y="346" text-anchor="middle" class="head">Linux</text>
+  <text x="78" y="366" text-anchor="middle" class="dim">checks a list</text>
+  <text x="218" y="346" text-anchor="middle" class="head">Windows</text>
+  <text x="218" y="366" text-anchor="middle" class="dim">paints the front</text>
   <text x="560" y="346" text-anchor="middle" class="head">macOS</text>
   <text x="560" y="366" text-anchor="middle" class="dim">rings, then flattens</text>
 </svg>

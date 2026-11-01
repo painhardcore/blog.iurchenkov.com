@@ -24,7 +24,7 @@
   <rect x="460" y="24" width="150" height="76" rx="8" class="drive"/>
   <text x="535" y="62" text-anchor="middle" class="big">F:</text>
   <text x="535" y="88" text-anchor="middle" class="acc">old CarryFS</text>
-  <text x="360" y="66" text-anchor="middle" class="dim">one stick, two letters</text>
+  <text x="360" y="66" text-anchor="middle" class="dim">two letters</text>
 
   <path d="M185 100 L172 164" class="arrow" marker-end="url(#pf-two-tip)"/>
   <path d="M535 100 L178 164" class="arrow" marker-end="url(#pf-two-tip)"/>
