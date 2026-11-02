@@ -349,7 +349,7 @@ I thought the lock was a safety net. If Windows has exFAT mounted, surely it won
 carryfs: \\.\Harddisk3Partition2: mounted F:
 ```
 
-Now the stick had two drive letters for one partition. D: was exFAT. F: was the old CarryFS, with the file I'd left on it. While F: was mounted, every access to D: failed with `Access is denied`. After the eject, exFAT's file was gone, the volume label was garbage, and chkdsk reported a corrupt bitmap and upcase table. Root A said `CFSXROOT` again, written right over exFAT's FAT.
+Now the stick had two drive letters for one partition. `D:` was exFAT. `F:` was the old CarryFS, with the file I'd left on it. While `F:` was mounted, every access to `D:` failed with `Access is denied`. After the eject, exFAT's file was gone, the volume label was garbage, and chkdsk reported a corrupt bitmap and upcase table. Root A said `CFSXROOT` again, written right over exFAT's FAT.
 
 <figure>
   <div
@@ -386,7 +386,7 @@ sequenceDiagram
 	Note over Disk: exFAT's FAT overwritten
 ```
 
-I ran the exFAT case a second time and wrote nothing to F:. Mounting and ejecting alone corrupted exFAT again. Once a volume passes the full check, a writable mount repairs any missing root before it accepts a single file operation. So the mount itself wrote root A back, right over exFAT's FAT. With NTFS and FAT32 the full check failed first, so nothing mounted and both filesystems survived.
+I ran the exFAT case a second time and wrote nothing to `F:`. Mounting and ejecting alone corrupted exFAT again. Once a volume passes the full check, a writable mount repairs any missing root before it accepts a single file operation. So the mount itself wrote root A back, right over exFAT's FAT. With NTFS and FAT32 the full check failed first, so nothing mounted and both filesystems survived.
 
 ### The volume that wouldn't stay dead
 
