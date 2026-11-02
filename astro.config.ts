@@ -100,6 +100,17 @@ export default defineConfig({
         context: "client",
         optional: true,
       }),
+      // Project API keys are public by design; analytics is skipped when unset.
+      PUBLIC_POSTHOG_KEY: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
+      PUBLIC_POSTHOG_HOST: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
     },
   },
   experimental: {

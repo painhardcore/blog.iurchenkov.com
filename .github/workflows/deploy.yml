@@ -20,6 +20,8 @@ jobs:
     timeout-minutes: 15
     env:
       ASTRO_TELEMETRY_DISABLED: 1
+      PUBLIC_POSTHOG_KEY: ${{ vars.PUBLIC_POSTHOG_KEY }}
+      PUBLIC_POSTHOG_HOST: ${{ vars.PUBLIC_POSTHOG_HOST }}
     steps:
       - uses: actions/checkout@v7.0.1
       # ci-standard: except make-entry — Bun scripts are the project's shared check/build entry points.
