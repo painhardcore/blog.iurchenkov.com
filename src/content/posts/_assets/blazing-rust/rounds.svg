@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 335" class="rounds" style="display:block;width:100%;min-width:34rem;height:auto">
+<style>
+  .rounds text { font-size: 14px; fill: var(--foreground); }
+  .rounds .dim { fill: var(--muted-foreground); }
+  .rounds .small { font-size: 12px; }
+  .rounds .big { font-size: 16px; font-weight: 700; }
+  .rounds .acc { fill: var(--accent); }
+  .rounds .accs { stroke: var(--accent); }
+  .rounds .base { fill: var(--muted-foreground); }
+  .rounds .bases { stroke: var(--muted-foreground); }
+  .rounds .grid { stroke: var(--muted); stroke-width: 1; }
+  .rounds .ring { stroke: var(--background); stroke-width: 2; }
+  .rounds .b { font-weight: 700; }
+</style>
+<circle cx="110" cy="23" r="6" class="base"/>
+<text x="122.0" y="28.0" class="dim">without the skill</text>
+<circle cx="300" cy="23" r="6" class="acc"/>
+<text x="312.0" y="28.0" class="dim">with the skill</text>
+<line x1="90" y1="270.0" x2="660" y2="270.0" class="grid"/>
+<text x="80.0" y="274.0" class="dim small" text-anchor="end">70%</text>
+<line x1="90" y1="206.66666666666666" x2="660" y2="206.66666666666666" class="grid"/>
+<text x="80.0" y="210.7" class="dim small" text-anchor="end">80%</text>
+<line x1="90" y1="143.33333333333331" x2="660" y2="143.33333333333331" class="grid"/>
+<text x="80.0" y="147.3" class="dim small" text-anchor="end">90%</text>
+<line x1="90" y1="80.0" x2="660" y2="80.0" class="grid"/>
+<text x="80.0" y="84.0" class="dim small" text-anchor="end">100%</text>
+<polyline points="110.0,118.0 286.7,206.7 463.3,232.0 640.0,194.0" fill="none" class="bases" stroke-width="2"/>
+<polyline points="110.0,80.0 286.7,80.0 463.3,105.3 640.0,80.0" fill="none" class="accs" stroke-width="2"/>
+<circle cx="110.0" cy="118.0" r="6" class="base ring"/>
+<circle cx="110.0" cy="80.0" r="7" class="acc ring"/>
+<text x="110.0" y="66.0" class="b" text-anchor="middle">100%</text>
+<text x="110.0" y="140.0" class="dim" text-anchor="middle">94%</text>
+<text x="110.0" y="304.0" text-anchor="middle">Round 1</text>
+<text x="110.0" y="322.0" class="dim small" text-anchor="middle">my CLAUDE.md on</text>
+<circle cx="286.66666666666663" cy="206.66666666666666" r="6" class="base ring"/>
+<circle cx="286.66666666666663" cy="80.0" r="7" class="acc ring"/>
+<text x="286.7" y="66.0" class="b" text-anchor="middle">100%</text>
+<text x="286.7" y="228.7" class="dim" text-anchor="middle">80%</text>
+<text x="286.7" y="304.0" text-anchor="middle">Round 2</text>
+<text x="286.7" y="322.0" class="dim small" text-anchor="middle">safe mode</text>
+<circle cx="463.3333333333333" cy="232.0" r="6" class="base ring"/>
+<circle cx="463.3333333333333" cy="105.33333333333334" r="7" class="acc ring"/>
+<text x="463.3" y="91.3" class="b" text-anchor="middle">96%</text>
+<text x="463.3" y="254.0" class="dim" text-anchor="middle">76%</text>
+<text x="463.3" y="304.0" text-anchor="middle">Round 3</text>
+<text x="463.3" y="322.0" class="dim small" text-anchor="middle">push harder</text>
+<circle cx="640.0" cy="194.0" r="6" class="base ring"/>
+<circle cx="640.0" cy="80.0" r="7" class="acc ring"/>
+<text x="640.0" y="66.0" class="b" text-anchor="middle">100%</text>
+<text x="640.0" y="216.0" class="dim" text-anchor="middle">82%</text>
+<text x="640.0" y="304.0" text-anchor="middle">Round 4</text>
+<text x="640.0" y="322.0" class="dim small" text-anchor="middle">three fixes</text>
+</svg>

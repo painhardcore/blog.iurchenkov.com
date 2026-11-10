@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" class="price" style="display:block;width:100%;min-width:34rem;height:auto">
+<style>
+  .price text { font-size: 14px; fill: var(--foreground); }
+  .price .dim { fill: var(--muted-foreground); }
+  .price .small { font-size: 12px; }
+  .price .big { font-size: 16px; font-weight: 700; }
+  .price .acc { fill: var(--accent); }
+  .price .accs { stroke: var(--accent); }
+  .price .base { fill: var(--muted-foreground); }
+  .price .bases { stroke: var(--muted-foreground); }
+  .price .grid { stroke: var(--muted); stroke-width: 1; }
+  .price .ring { stroke: var(--background); stroke-width: 2; }
+  .price .b { font-weight: 700; }
+</style>
+<circle cx="80" cy="19" r="6" class="base"/>
+<text x="92.0" y="24.0" class="dim">without the skill</text>
+<circle cx="270" cy="19" r="6" class="acc"/>
+<text x="282.0" y="24.0" class="dim">with the skill</text>
+<line x1="80" y1="280.0" x2="680" y2="280.0" class="grid"/>
+<text x="70.0" y="284.0" class="dim small" text-anchor="end">70%</text>
+<line x1="80" y1="203.33333333333331" x2="680" y2="203.33333333333331" class="grid"/>
+<text x="70.0" y="207.3" class="dim small" text-anchor="end">80%</text>
+<line x1="80" y1="126.66666666666666" x2="680" y2="126.66666666666666" class="grid"/>
+<text x="70.0" y="130.7" class="dim small" text-anchor="end">90%</text>
+<line x1="80" y1="50.0" x2="680" y2="50.0" class="grid"/>
+<text x="70.0" y="54.0" class="dim small" text-anchor="end">100%</text>
+<line x1="119.1" y1="50" x2="119.1" y2="280" class="grid"/>
+<text x="119.1" y="300.0" class="dim small" text-anchor="middle">$0.03</text>
+<line x1="235.4" y1="50" x2="235.4" y2="280" class="grid"/>
+<text x="235.4" y="300.0" class="dim small" text-anchor="middle">$0.10</text>
+<line x1="341.5" y1="50" x2="341.5" y2="280" class="grid"/>
+<text x="341.5" y="300.0" class="dim small" text-anchor="middle">$0.30</text>
+<line x1="457.7" y1="50" x2="457.7" y2="280" class="grid"/>
+<text x="457.7" y="300.0" class="dim small" text-anchor="middle">$1</text>
+<line x1="563.8" y1="50" x2="563.8" y2="280" class="grid"/>
+<text x="563.8" y="300.0" class="dim small" text-anchor="middle">$3</text>
+<line x1="680.0" y1="50" x2="680.0" y2="280" class="grid"/>
+<text x="680.0" y="300.0" class="dim small" text-anchor="middle">$10</text>
+<text x="680.0" y="322.0" class="dim small" text-anchor="end">cost of the 4 tasks, log scale</text>
+<line x1="128.3" y1="211.0" x2="203.7" y2="73.0" class="bases" stroke-width="1.5" opacity="0.6"/>
+<circle cx="128.3" cy="211.0" r="7" class="base ring"/>
+<circle cx="203.7" cy="73.0" r="8" class="acc ring"/>
+<text x="215.7" y="78.0"><tspan class="b">Haiku</tspan> <tspan class="dim small">$0.07</tspan></text>
+<text x="140.3" y="216.0" class="dim small">$0.03</text>
+<line x1="398.2" y1="234.0" x2="463.3" y2="80.7" class="bases" stroke-width="1.5" opacity="0.6"/>
+<circle cx="398.2" cy="234.0" r="7" class="base ring"/>
+<circle cx="463.3" cy="80.7" r="8" class="acc ring"/>
+<text x="475.3" y="85.7"><tspan class="b">Sonnet</tspan> <tspan class="dim small">$1.06</tspan></text>
+<text x="410.2" y="239.0" class="dim small">$0.54</text>
+<line x1="565.0" y1="188.0" x2="622.3" y2="50.0" class="bases" stroke-width="1.5" opacity="0.6"/>
+<circle cx="565.0" cy="188.0" r="7" class="base ring"/>
+<circle cx="622.3" cy="50.0" r="8" class="acc ring"/>
+<text x="608.3" y="55.0" text-anchor="end"><tspan class="dim small">$5.50</tspan> <tspan class="b">Opus</tspan></text>
+<text x="577.0" y="193.0" class="dim small">$3.04</text>
+<line x1="203.7" y1="73.0" x2="565.0" y2="188.0" class="accs" stroke-width="1" stroke-dasharray="3 4" opacity="0.7"/>
+<text x="280.8" y="157.3" class="dim small" text-anchor="middle">Haiku with the skill</text>
+<text x="280.8" y="173.3" class="dim small" text-anchor="middle">beats Opus without it</text>
+</svg>
